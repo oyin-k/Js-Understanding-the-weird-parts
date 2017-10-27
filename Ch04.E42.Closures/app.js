@@ -26,7 +26,8 @@ function buildFunctions() {
                 return function() {
                     console.log(j);
                 }
-            })(i));
+            })(i)
+        );
     }
 
     return arr;

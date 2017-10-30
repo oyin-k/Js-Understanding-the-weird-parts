@@ -45,3 +45,16 @@ var checkPastLimit = function(limiter, item) {
 
 var arr4 = mapForEach(arr1, checkPastLimit.bind(this, 1));
 console.log(arr4);
+
+var checkPastLimitSimplified = function(limiter) {
+    return function(limiter, item) {
+        return item > limiter;
+    }.bind(this, limiter);
+};
+
+var arr5 = mapForEach(arr1, checkPastLimitSimplified(1));
+console.log(arr5);
+
+
+var arr6 = _.map(arr1, function(item) { return item * 3 });
+console.log(arr6);
